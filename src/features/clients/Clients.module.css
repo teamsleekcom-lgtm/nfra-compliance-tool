@@ -1,0 +1,127 @@
+.filterContainer {
+    padding: 0.25rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+}
+
+.select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background-color: white;
+}
+
+.listContainer {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.clientItem {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background: white;
+}
+
+.clientItem:hover {
+    background-color: #f8fafc;
+}
+
+.clientItemActive {
+    background-color: #e0f2fe;
+    border-left: 3px solid #0284c7;
+}
+
+.clientHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.clientName {
+    font-weight: 500;
+    color: #0f172a;
+    font-size: 0.95rem;
+}
+
+.nfraBadge {
+    font-size: 0.625rem;
+    background-color: #be123c;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.subText {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.progressBar {
+    height: 4px;
+    background-color: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #22c55e;
+    transition: width 0.3s ease;
+}
+
+.infoPanel {
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.card {
+    background: white;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.premiumCTA {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.adPlaceholder {
+    background: #e2e8f0;
+    color: #64748b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    border: 1px dashed #94a3b8;
+}
+
+.feedbackLink {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.feedbackLink:hover {
+    text-decoration: underline;
+}
