@@ -1,5 +1,6 @@
 {
   "name": "nfra-compliance-tool",
+  "homepage": "https://teamsleekcom-lgtm.github.io/nfra-compliance-tool/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
