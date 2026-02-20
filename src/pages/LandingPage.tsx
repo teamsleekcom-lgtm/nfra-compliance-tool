@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiEdit3, FiLock, FiCloud, FiFileText } from 'react-icons/fi';
+import { FiEdit3, FiLock, FiCloud, FiFileText, FiX } from 'react-icons/fi';
 import styles from './LandingPage.module.css';
 
 export const LandingPage: React.FC = () => {
     const navigate = useNavigate();
+    const [isCircularsOpen, setIsCircularsOpen] = useState(false);
 
     return (
         <div className={styles.container}>
@@ -71,24 +72,9 @@ export const LandingPage: React.FC = () => {
                     <div className={styles.resources}>
                         <div className={styles.resourcesTitle}>Official Resources</div>
                         <div className={styles.resourceLinks}>
-                            <a href="/resources/nfra-circulars/NFRA Circular Non Compliance with Ind AS policies on Revenue.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Ind AS on Revenue
-                            </a>
-                            <a href="/resources/nfra-circulars/NFRA Circular on Effective Communication Between Statutory Auditors and Those Charged with Governance, Including Audit Committees.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Effective Communication
-                            </a>
-                            <a href="/resources/nfra-circulars/NFRA Circular on Maintenance, archival and submission of Audit File to NFRA..pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Archival & Submission
-                            </a>
-                            <a href="/resources/nfra-circulars/NFRA circular on Statutory Auditors’ responsibilities in relation to Fraud in a Company.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Responsibilities on Fraud
-                            </a>
-                            <a href="/resources/nfra-circulars/NFRA Circular on Non-Accrual of interest on borrowings by the companies in violation of Indian Accounting Standards.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Non-Accrual of Interest
-                            </a>
-                            <a href="/resources/nfra-circulars/NFRA Circular on Responsibilities of Principal Auditor and Other Auditors in Group Audits.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
-                                <FiFileText /> Circular: Group Audits
-                            </a>
+                            <button onClick={() => setIsCircularsOpen(true)} className={styles.resourceLink} style={{ background: '#f1f5f9', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
+                                <FiFileText /> NFRA Circulars
+                            </button>
                             <a href="/resources/asm/ASM Audit Stretagy Memorandum file.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink} style={{ background: '#e0f2fe', color: '#0369a1' }}>
                                 <FiFileText /> ASM Draft by NFRA
                             </a>
@@ -106,6 +92,46 @@ export const LandingPage: React.FC = () => {
                     <a href="#" className={styles.footerLink} onClick={(e) => e.preventDefault()}>Disclaimer</a>
                 </div>
             </footer>
+
+            {/* Circulars Modal */}
+            {isCircularsOpen && (
+                <div className={styles.modalOverlay} onClick={() => setIsCircularsOpen(false)}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <div className={styles.modalHeader}>
+                            <h3 className={styles.modalTitle}>NFRA Circulars</h3>
+                            <button className={styles.closeButton} onClick={() => setIsCircularsOpen(false)}>
+                                <FiX />
+                            </button>
+                        </div>
+                        <div className={styles.modalBody}>
+                            <a href="/resources/nfra-circulars/NFRA Circular Non Compliance with Ind AS policies on Revenue.pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Non Compliance with Ind AS policies on Revenue</span>
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Effective Communication Between Statutory Auditors and Those Charged with Governance, Including Audit Committees.pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Effective Communication Between Statutory Auditors and Those Charged with Governance</span>
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Maintenance, archival and submission of Audit File to NFRA..pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Maintenance, Archival and Submission of Audit File to NFRA</span>
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA circular on Statutory Auditors’ responsibilities in relation to Fraud in a Company.pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Statutory Auditors’ Responsibilities in relation to Fraud in a Company</span>
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Non-Accrual of interest on borrowings by the companies in violation of Indian Accounting Standards.pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Non-Accrual of Interest on Borrowings in Violation of Ind AS</span>
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Responsibilities of Principal Auditor and Other Auditors in Group Audits.pdf" target="_blank" rel="noopener noreferrer" className={styles.modalLink}>
+                                <FiFileText className={styles.modalLinkIcon} />
+                                <span className={styles.modalLinkText}>Responsibilities of Principal Auditor and Other Auditors in Group Audits</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
