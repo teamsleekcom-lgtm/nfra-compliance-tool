@@ -75,7 +75,7 @@ export const LandingPage: React.FC = () => {
                             <button onClick={() => setIsCircularsOpen(true)} className={styles.resourceLink} style={{ background: '#f1f5f9', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                                 <FiFileText /> NFRA Circulars
                             </button>
-                            <a href="/resources/asm/ASM Audit Stretagy Memorandum file.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink} style={{ background: '#e0f2fe', color: '#0369a1' }}>
+                            <a href="/resources/asm/ASM Audit Stretagy Memorandum file.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
                                 <FiFileText /> ASM Draft by NFRA
                             </a>
                         </div>
