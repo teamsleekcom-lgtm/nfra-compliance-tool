@@ -88,7 +88,7 @@ export const LandingPage: React.FC = () => {
             <footer className={styles.footer}>
                 <div>&copy; {new Date().getFullYear()} NFRA Compliance Tool. All rights reserved.</div>
                 <div className={styles.footerLinks}>
-                    <a href="#" className={styles.footerLink} onClick={(e) => e.preventDefault()}>Terms & Conditions</a>
+                    <a href="/terms" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Terms & Conditions</a>
                     <a href="#" className={styles.footerLink} onClick={(e) => e.preventDefault()}>Disclaimer</a>
                 </div>
             </footer>

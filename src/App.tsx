@@ -63,6 +63,7 @@ function Dashboard() {
 
 import { LandingPage } from './pages/LandingPage'
 import { HasherPage } from './pages/HasherPage'
+import { TermsPage } from './pages/TermsPage'
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/asm" element={<Dashboard />} />
       <Route path="/hasher" element={<HasherPage />} />
+      <Route path="/terms" element={<TermsPage />} />
       {/* Redirect unknown routes to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
