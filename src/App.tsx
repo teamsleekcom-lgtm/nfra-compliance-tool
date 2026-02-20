@@ -61,10 +61,15 @@ function Dashboard() {
   )
 }
 
+import { LandingPage } from './pages/LandingPage'
+import { HasherPage } from './pages/HasherPage'
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/asm" element={<Dashboard />} />
+      <Route path="/hasher" element={<HasherPage />} />
       {/* Redirect unknown routes to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
