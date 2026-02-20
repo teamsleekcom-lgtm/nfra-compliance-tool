@@ -71,10 +71,25 @@ export const LandingPage: React.FC = () => {
                     <div className={styles.resources}>
                         <div className={styles.resourcesTitle}>Official Resources</div>
                         <div className={styles.resourceLinks}>
-                            <a href="#" className={styles.resourceLink} onClick={(e) => e.preventDefault()}>
-                                <FiFileText /> NFRA Circulars
+                            <a href="/resources/nfra-circulars/NFRA Circular Non Compliance with Ind AS policies on Revenue.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Ind AS on Revenue
                             </a>
-                            <a href="#" className={styles.resourceLink} onClick={(e) => e.preventDefault()}>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Effective Communication Between Statutory Auditors and Those Charged with Governance, Including Audit Committees.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Effective Communication
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Maintenance, archival and submission of Audit File to NFRA..pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Archival & Submission
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA circular on Statutory Auditors’ responsibilities in relation to Fraud in a Company.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Responsibilities on Fraud
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Non-Accrual of interest on borrowings by the companies in violation of Indian Accounting Standards.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Non-Accrual of Interest
+                            </a>
+                            <a href="/resources/nfra-circulars/NFRA Circular on Responsibilities of Principal Auditor and Other Auditors in Group Audits.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink}>
+                                <FiFileText /> Circular: Group Audits
+                            </a>
+                            <a href="/resources/asm/ASM Audit Stretagy Memorandum file.pdf" target="_blank" rel="noopener noreferrer" className={styles.resourceLink} style={{ background: '#e0f2fe', color: '#0369a1' }}>
                                 <FiFileText /> ASM Draft by NFRA
                             </a>
                         </div>
