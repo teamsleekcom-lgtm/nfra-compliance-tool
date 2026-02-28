@@ -6,12 +6,14 @@ import { ChecklistPanel } from './features/checklist/ChecklistPanel'
 import { EditorPanel } from './features/editor/EditorPanel'
 import { EmptyState } from './components/EmptyState'
 import { FirstTimeModal } from './components/FirstTimeModal'
+import { LoadingScreen } from './components/LoadingScreen'
 import { useClients } from './hooks/useClients'
 import type { FinancialYear } from './types'
 
 import type { ChecklistItem } from './features/checklist/data';
 
 function Dashboard() {
+  const [isProcessing, setIsProcessing] = useState(true);
   const [selectedYear, setSelectedYear] = useState<FinancialYear>('2024-25');
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
   const [selectedChecklistItem, setSelectedChecklistItem] = useState<ChecklistItem | null>(null);
@@ -23,7 +25,9 @@ function Dashboard() {
     setSelectedChecklistItem(null);
   };
 
-
+  if (isProcessing) {
+    return <LoadingScreen onComplete={() => setIsProcessing(false)} />;
+  }
 
   return (
     <>
