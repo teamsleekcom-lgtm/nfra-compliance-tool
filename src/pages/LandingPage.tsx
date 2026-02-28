@@ -13,7 +13,7 @@ export const LandingPage: React.FC = () => {
 
                 {/* Left Side: Hero */}
                 <div className={styles.hero}>
-                    <h1 className={styles.title}>NFRA Compliance Suite</h1>
+                    <h1 className={styles.title}>NFRA Compliance Tools</h1>
                     <p className={styles.subtitle}>
                         All NFRA compliance requirements at one place. A secure, structured, and professional platform designed for Chartered Accountants to manage audit documentation effortlessly.
                     </p>
@@ -88,7 +88,7 @@ export const LandingPage: React.FC = () => {
             <footer className={styles.footer}>
                 <div>&copy; {new Date().getFullYear()} NFRA Compliance Tool. All rights reserved.</div>
                 <div className={styles.footerLinks}>
-                    <a href="/terms" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Terms & Conditions</a>
+                    <a href="#/terms" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Terms & Conditions</a>
                     <a href="#" className={styles.footerLink} onClick={(e) => e.preventDefault()}>Disclaimer</a>
                 </div>
             </footer>
