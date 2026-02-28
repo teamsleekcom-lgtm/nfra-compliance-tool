@@ -29,7 +29,6 @@ export const LandingPage: React.FC = () => {
             {/* Header Navigation */}
             <header className={styles.header}>
                 <div className={styles.logo}>
-                    <FiShield className={styles.logoIcon} />
                     NFRA Compliance Tools
                 </div>
                 <nav className={styles.navLinks}>
@@ -163,8 +162,8 @@ export const LandingPage: React.FC = () => {
 
                         <div className={styles.featureCard}>
                             <FiCheckCircle className={styles.featureIcon} style={{ color: '#10b981' }} />
-                            <h3 className={styles.featureTitle}>100% Free</h3>
-                            <p className={styles.featureDesc}>All features included. No premium tiers to unlock basic needs.</p>
+                            <h3 className={styles.featureTitle}>Free to use ASM</h3>
+                            <p className={styles.featureDesc}>All features included.</p>
                         </div>
 
                         <div className={styles.featureCard}>
@@ -286,15 +285,6 @@ export const LandingPage: React.FC = () => {
                     </div>
 
                     <div className={styles.footerCol}>
-                        <h4>COMPANY</h4>
-                        <div className={styles.footerLinks}>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>About Us</span>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>Contact</span>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>Blog</span>
-                        </div>
-                    </div>
-
-                    <div className={styles.footerCol}>
                         <h4>LEGAL</h4>
                         <div className={styles.footerLinks}>
                             <a href="#/terms" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Terms & Conditions</a>
@@ -302,20 +292,11 @@ export const LandingPage: React.FC = () => {
                             <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>Cookies Policy</span>
                         </div>
                     </div>
-
-                    <div className={styles.footerCol}>
-                        <h4>SUPPORT</h4>
-                        <div className={styles.footerLinks}>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>FAQ</span>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>Help Center</span>
-                            <span className={styles.footerLink} style={{ cursor: 'not-allowed' }}>Video Guides</span>
-                        </div>
-                    </div>
                 </div>
 
                 <div className={styles.footerBottom}>
                     <div>
-                        © {new Date().getFullYear()} Heuristic Techsol LLP. Made with ❤️ for Indian CAs.<br />
+                        © {new Date().getFullYear()} Heuristic Techsol LLP. Made for Indian CAs.<br />
                         <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>Not affiliated with NFRA / ICAI / MCA.</span>
                     </div>
 
