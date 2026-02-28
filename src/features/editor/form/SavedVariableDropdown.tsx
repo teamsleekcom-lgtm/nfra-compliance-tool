@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { variableService } from '../../../services/db';
+import styles from './Tooltip.module.css';
 
 interface SavedVariableDropdownProps {
     id: string;
@@ -90,6 +91,13 @@ export const SavedVariableDropdown: React.FC<SavedVariableDropdownProps> = ({ va
                 ))}
                 <option value="__custom__" style={{ fontStyle: 'italic', fontWeight: 'bold' }}>+ Add New...</option>
             </select>
+            <div className={styles.tooltipContainer}>
+                <span className={`${styles.icon} ${styles.iconGreen}`}>?</span>
+                <div className={styles.tooltipText}>
+                    <span className={`${styles.title} ${styles.titleGreen}`}>Saved Variable</span>
+                    Auto-suggests from your past entries. Frequently used values ranked higher.
+                </div>
+            </div>
         </span>
     );
 };

@@ -118,6 +118,7 @@ export const ClientsSidebar: React.FC<ClientsSidebarProps> = ({
                 <div style={{ flex: 1 }}>
                     {!isAdding ? (
                         <button
+                            id="add-client-sidebar-btn"
                             onClick={() => setIsAdding(true)}
                             style={{
                                 width: '100%',

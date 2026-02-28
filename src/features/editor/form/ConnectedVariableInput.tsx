@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import styles from './Tooltip.module.css';
 
 interface ConnectedVariableInputProps {
     id: string;
@@ -65,6 +66,13 @@ export const ConnectedVariableInput: React.FC<ConnectedVariableInputProps> = ({ 
                     🔗 Updates all "{variableId}"
                 </span>
             )}
+            <div className={styles.tooltipContainer}>
+                <span className={`${styles.icon} ${styles.iconBlue}`}>?</span>
+                <div className={styles.tooltipText}>
+                    <span className={`${styles.title} ${styles.titleBlue}`}>Connected Variable</span>
+                    Type once, auto-fills everywhere. This field appears in multiple places—editing here updates all.
+                </div>
+            </div>
         </span>
     );
 };

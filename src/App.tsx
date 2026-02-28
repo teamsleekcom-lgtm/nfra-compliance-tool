@@ -4,6 +4,8 @@ import { AppLayout } from './components/AppLayout'
 import { ClientsSidebar } from './features/clients/ClientsSidebar'
 import { ChecklistPanel } from './features/checklist/ChecklistPanel'
 import { EditorPanel } from './features/editor/EditorPanel'
+import { EmptyState } from './components/EmptyState'
+import { FirstTimeModal } from './components/FirstTimeModal'
 import { useClients } from './hooks/useClients'
 import type { FinancialYear } from './types'
 
@@ -43,6 +45,12 @@ function Dashboard() {
               onSelectItem={setSelectedChecklistItem}
               selectedItemId={selectedChecklistItem?.id}
             />
+          ) : clients.length === 0 ? (
+            <EmptyState
+              onAddClientClick={() => {
+                document.getElementById('add-client-sidebar-btn')?.click();
+              }}
+            />
           ) : (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color: '#64748b', padding: '1rem', textAlign: 'center' }}>
               Select a client to view the compliance checklist.
@@ -50,13 +58,20 @@ function Dashboard() {
           )
         }
         rightColumn={
-          <EditorPanel
-            clientId={selectedClientId}
-            checklistItem={selectedChecklistItem}
-            insertPayload={null}
-          />
+          selectedClientId ? (
+            <EditorPanel
+              clientId={selectedClientId}
+              checklistItem={selectedChecklistItem}
+              insertPayload={null}
+            />
+          ) : clients.length === 0 ? null : (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color: '#64748b', padding: '1rem', textAlign: 'center' }}>
+              Select a required section to begin editing.
+            </div>
+          )
         }
       />
+      <FirstTimeModal />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
+import styles from './Tooltip.module.css';
 
 interface UniqueEntryInputProps {
     id: string;
@@ -57,6 +58,13 @@ export const UniqueEntryInput: React.FC<UniqueEntryInputProps> = ({ placeholder,
                     fieldSizing: 'content' as any, // Modern CSS - auto-sizes if supported
                 }}
             />
+            <div className={styles.tooltipContainer}>
+                <span className={`${styles.icon} ${styles.iconBrown}`}>?</span>
+                <div className={styles.tooltipText}>
+                    <span className={`${styles.title} ${styles.titleBrown}`}>Unique Entry</span>
+                    Information specific to this engagement. You'll type this each time.
+                </div>
+            </div>
         </span>
     );
 };
