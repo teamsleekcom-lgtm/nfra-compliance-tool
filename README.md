@@ -1,73 +1,31 @@
-# React + TypeScript + Vite
+# NFRA Compliance Tools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 100% free, fast, and secure Audit Strategy Memorandum (ASM) preparation tool designed specifically for Indian Chartered Accountants working on NFRA-compliant audits.
 
-Currently, two official plugins are available:
+## 📊 Admin Analytics Dashboard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To view live active users, visitor statistics, and user engagement metrics, please log into the Google Analytics dashboard associated with the property tracking this tool.
 
-## React Compiler
+**[👉 Click here to open the Google Analytics Dashboard](https://analytics.google.com/analytics/web/?authuser=0#/p477543888/reports/intelligenthome)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*(Note: You will need to be logged into the Google Account that owns or has access to this GA4 property).*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technical Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project is a React SPA built with TypeScript, Vite, and React Router.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Scripts
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `npm run dev`: Starts the local development server.
+- `npm run build`: Builds the app for production (`HashRouter` is used for static hosting compatibility like GitHub Pages).
+- `npm run preview`: Previews the production build locally.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Key Libraries used
+- `lucide-react` / `react-icons` for scalable icons.
+- `framer-motion` for complex animations.
+- `jspdf` for document generation.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
+MIT (or as privately determined by Heuristic Techsol LLP).
